@@ -7,12 +7,11 @@ export const gsapHome = () => {
   console.log('ancolkoncol');
   gsap.to('.grid-block-background', {
     backgroundColor: '#222222',
-
+    repeat: -1,
+    repeatDelay: repeatDelay,
     stagger: {
-      each: 100,
+      each: 1,
       from: 'random',
-      ease: 'power2.inOut',
-      repeat: -1,
     },
   });
 };
