@@ -2,9 +2,6 @@
 import { gsapHome } from '$utils/gsapHome';
 
 window.Webflow ||= [];
-window.Webflow.push(() => {
-  const name = 'John Doe';
-  greetUser(name);
-});
+window.Webflow.push(() => {});
 
 gsapHome();
