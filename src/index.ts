@@ -1,4 +1,3 @@
-// import { greetUser } from '$utils/greet';
 import { gsapHome } from '$utils/gsapHome';
 
 window.Webflow ||= [];
