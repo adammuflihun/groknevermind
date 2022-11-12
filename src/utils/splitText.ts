@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import SplitType from 'split-type';
+import { SplitType } from 'split-type';
 
 gsap.registerPlugin(ScrollToPlugin);
 
