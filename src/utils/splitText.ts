@@ -34,11 +34,11 @@ export const SplitTextHome = () => {
         },
         y: '2rem',
         opacity: 0,
-        duration: 0.3,
+        duration: 0.1,
         stagger: 0.1,
         // ease: 'expo.out',
       });
-      gsap.to(textInstance, {
+      gsap.to(textInstance, 0.2, {
         scrollTrigger: {
           trigger: '.trigger-0',
           start: 'top 1rem',
@@ -48,7 +48,6 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse none',
         },
         display: 'none',
-        duration: 0,
       });
     });
   };
@@ -68,7 +67,7 @@ export const SplitTextHome = () => {
       let tl = gsap.timeline({});
 
       tl.set(textInstance, { opacity: 0 });
-      gsap.to(textInstance, {
+      gsap.to(textInstance, 0.2, {
         scrollTrigger: {
           trigger: '.trigger-1',
           start: 'top 0%',
@@ -77,7 +76,6 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse none',
         },
         display: 'block',
-        duration: 0,
         opacity: 1,
       });
       gsap.fromTo(
@@ -93,7 +91,7 @@ export const SplitTextHome = () => {
           },
           y: '0rem',
           opacity: 1,
-          duration: 0.3,
+          duration: 0.2,
           stagger: 0.1,
           // ease: 'expo.out',
         }
