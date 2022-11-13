@@ -3,7 +3,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.set('   .title-4 , .title5, .title-6, .title-7', { opacity: 0 });
+gsap.set(' .title-2 ,  .title-4  , .title5 , .title-6 , .title-7 ', {
+  opacity: 0,
+});
 
 export const SplitTextHome = () => {
   let windowWidth = window.outerWidth;
@@ -29,6 +31,15 @@ export const SplitTextHome = () => {
           start: 'top 1rem',
           end: 'top 1rem',
           // markers: true,
+          onEnterBack: () => {
+            gsap.to($('.title-2').find('.word'), {
+              y: '2rem',
+              opacity: 0,
+              duration: 0.2,
+              stagger: 0.1,
+              ease: 'expo.out',
+            });
+          },
           toggleActions: 'play none reverse none',
         },
         y: '2rem',
@@ -37,17 +48,6 @@ export const SplitTextHome = () => {
         stagger: 0.1,
         // ease: 'expo.out',
       });
-      // gsap.to(textInstance, 0.1, {
-      //   scrollTrigger: {
-      //     trigger: '.trigger-0',
-      //     start: 'top 1rem',
-      //     end: 'bottom 1rem',
-
-      //     // markers: true,
-      //     toggleActions: 'play none reverse none',
-      //   },
-      //   display: 'none',
-      // });
     });
   };
 
@@ -65,14 +65,13 @@ export const SplitTextHome = () => {
       let word = $('.title-2').find('.word');
       let tl = gsap.timeline({});
 
-      // tl.set(textInstance, { opacity: 0 });
       gsap.to(textInstance, 0.05, {
         scrollTrigger: {
           trigger: '.trigger-1',
           start: 'top 0%',
-          end: 'top 2rem%',
+          end: 'top 2rem',
           // markers: true,
-          toggleActions: 'play none reverse none',
+          toggleActions: 'play none none none',
         },
         opacity: 1,
       });
@@ -83,9 +82,10 @@ export const SplitTextHome = () => {
           scrollTrigger: {
             trigger: '.trigger-1',
             start: 'top 0%',
-            end: 'top 2rem%',
+            end: 'top 2rem',
             // markers: true,
-            toggleActions: 'play none reverse none',
+
+            toggleActions: 'play restart reverse restart',
           },
           y: '0rem',
           opacity: 1,
@@ -94,20 +94,6 @@ export const SplitTextHome = () => {
           ease: 'expo.out',
         }
       );
-      gsap.to(word, {
-        scrollTrigger: {
-          trigger: '.trigger-1out',
-          start: 'top 0%',
-          end: 'top 2rem%',
-          // markers: true,
-          toggleActions: 'play none reverse none',
-        },
-        y: '2rem',
-        opacity: 0,
-        duration: 0.2,
-        stagger: 0.1,
-        ease: 'expo.out',
-      });
     });
   };
 
@@ -131,7 +117,6 @@ export const SplitTextHome = () => {
           trigger: '.trigger-2',
           start: 'top 0%',
           end: 'top 2rem%',
-          // markers: true,
           toggleActions: 'play none reverse none',
         },
         opacity: 1,
@@ -144,14 +129,22 @@ export const SplitTextHome = () => {
             trigger: '.trigger-2',
             start: 'top 0%',
             end: 'top 2rem%',
-            // markers: true,
+            onEnter: () => {
+              gsap.to($('.title-2').find('.word'), {
+                y: '2rem',
+                opacity: 0,
+                duration: 0.2,
+                stagger: 0.1,
+                ease: 'expo.out',
+              });
+            },
             toggleActions: 'play none reverse none',
           },
           y: '0rem',
           opacity: 1,
           duration: 0.2,
           stagger: 0.1,
-          // ease: 'expo.out',
+          ease: 'expo.out',
         }
       );
     });
