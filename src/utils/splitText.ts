@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.set(' .title-3 , .title-4 , .title5, .title-6, .title-7', { opacity: 0 });
 
 export const SplitTextHome = () => {
   let windowWidth = window.outerWidth;
@@ -27,7 +28,7 @@ export const SplitTextHome = () => {
           trigger: '.trigger-0',
           start: 'top 1rem',
           end: 'top 1rem',
-          // markers: true,
+          markers: true,
           toggleActions: 'play none reverse none',
         },
         y: '2rem',
@@ -36,17 +37,17 @@ export const SplitTextHome = () => {
         stagger: 0.1,
         // ease: 'expo.out',
       });
-      gsap.to(textInstance, 0.1, {
-        scrollTrigger: {
-          trigger: '.trigger-0',
-          start: 'top 1rem',
-          end: 'top 1rem',
+      // gsap.to(textInstance, 0.1, {
+      //   scrollTrigger: {
+      //     trigger: '.trigger-0',
+      //     start: 'top 1rem',
+      //     end: 'bottom 1rem',
 
-          // markers: true,
-          toggleActions: 'play none reverse none',
-        },
-        display: 'none',
-      });
+      //     // markers: true,
+      //     toggleActions: 'play none reverse none',
+      //   },
+      //   display: 'none',
+      // });
     });
   };
 
@@ -64,7 +65,7 @@ export const SplitTextHome = () => {
       let word = $('.title-2').find('.word');
       let tl = gsap.timeline({});
 
-      tl.set(textInstance, { opacity: 0 });
+      // tl.set(textInstance, { opacity: 0 });
       gsap.to(textInstance, 0.05, {
         scrollTrigger: {
           trigger: '.trigger-1',
@@ -73,7 +74,6 @@ export const SplitTextHome = () => {
           // markers: true,
           toggleActions: 'play none reverse none',
         },
-        display: 'block',
         opacity: 1,
       });
       gsap.fromTo(
