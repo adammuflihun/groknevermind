@@ -1,115 +1,109 @@
 import { gsap } from 'gsap';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import { SplitTypeOptions } from 'split-type';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SplitType from 'split-type';
 
-gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export const SplitTextHome = () => {
   let windowWidth = window.outerWidth;
 
-  $('.split-text').each(function (index) {
-    let myText = $(this);
-    let mySplitText;
-    function createSplits() {
-      mySplitText = new SplitText(myText, {
-        type: 'chars,words,lines',
-        charsClass: 'split-chars',
-        wordsClass: 'split-words',
-        linesClass: 'split-lines',
+  //animation 1
+
+  let addAnimation = function () {
+    $('.title-1').each(function (index) {
+      const text = new SplitType($(this), {
+        types: 'lines, words',
+        lineClass: 'word-line',
       });
-    }
-    createSplits();
-    $(window).resize(function () {
-      if (window.outerWidth !== windowWidth) {
-        mySplitText.revert();
-        location.reload();
-      }
-      windowWidth = window.outerWidth;
-    });
-  });
 
-  function createTextAnimations() {
-    // Line Animation
-    $('.line-animation').each(function (index) {
-      let triggerElement = $(this);
-      let myText = $(this).find('.split-text');
-      let targetElement = $(this).find('.split-lines');
+      let textInstance = $(this);
+      let line = textInstance.find('.word-line');
+      let word = $(this).find('.word');
 
-      let tl = gsap.timeline({
+      let tl = gsap.timeline({});
+      let tl2 = gsap.timeline({});
+      // gsap.set(textInstance, { display: 'none' });
+
+      gsap.to(word, {
         scrollTrigger: {
-          trigger: triggerElement,
-          // trigger element - viewport
-          start: 'top bottom',
-          end: 'bottom top',
-          toggleActions: 'restart none none none',
+          trigger: '.trigger-0',
+          start: 'top 0%',
+          end: 'top 1rem',
+          // markers: true,
+          toggleActions: 'play none reverse none',
         },
-      });
-      tl.from(targetElement, {
-        duration: 0.5,
-        y: '150%',
-        rotationX: -90,
+        y: '2rem',
         opacity: 0,
-        ease: 'power1.inOut',
-        stagger: {
-          amount: 0.4,
-          from: '0',
-        },
-      });
-    });
-    // Word Animation
-    $('.word-animation').each(function (index) {
-      let triggerElement = $(this);
-      let myText = $(this).find('.split-text');
-      let targetElement = $(this).find('.split-words');
-
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: triggerElement,
-          // trigger element - viewport
-          start: 'top bottom',
-          end: 'bottom top',
-          toggleActions: 'restart none none none',
-        },
-      });
-      tl.from(targetElement, {
         duration: 0.3,
-        y: '80%',
-        rotationX: -90,
-        opacity: 0,
-        ease: 'power1.inOut',
-        stagger: {
-          amount: 0.9,
-          from: '0',
-        },
+        stagger: 0.1,
+        // ease: 'expo.out',
       });
-    });
-    // Letter Animation
-    $('.letter-animation').each(function (index) {
-      let triggerElement = $(this);
-      let myText = $(this).find('.split-text');
-      let targetElement = $(this).find('.split-chars');
-
-      let tl = gsap.timeline({
+      gsap.to(textInstance, {
         scrollTrigger: {
-          trigger: triggerElement,
-          // trigger element - viewport
-          start: 'top bottom',
-          end: 'bottom top',
-          toggleActions: 'restart none none none',
+          trigger: '.trigger-0',
+          start: 'top 1rem',
+          end: 'top 1rem',
+
+          // markers: true,
+          toggleActions: 'play none reverse none',
         },
-      });
-      tl.from(targetElement, {
-        duration: 0.5,
-        y: '60%',
-        opacity: 0,
-        rotationX: -90,
-        ease: 'power1.inOut',
-        stagger: {
-          amount: 0.7,
-          from: '0',
-        },
+        display: 'none',
       });
     });
-  }
-  createTextAnimations();
+  };
+
+  // animation 2
+
+  let addAnimation2 = function () {
+    $('.title-2').each(function (index) {
+      const text = new SplitType($(this), {
+        types: 'lines, words',
+        lineClass: 'word-line',
+      });
+
+      let textInstance = $(this);
+      let line = textInstance.find('.word-line');
+      let word = $('.title-2').find('.word');
+      let tl = gsap.timeline({});
+
+      tl.set(textInstance, { opacity: 0 });
+      gsap.to(textInstance, {
+        scrollTrigger: {
+          trigger: '.trigger-1',
+          start: 'top 0%',
+          end: 'top 2rem%',
+          // markers: true,
+          toggleActions: 'play none reverse none',
+        },
+        display: 'block',
+        opacity: 1,
+      });
+      gsap.fromTo(
+        word,
+        { opacity: 0, y: '2rem' },
+        {
+          scrollTrigger: {
+            trigger: '.trigger-1',
+            start: 'top 0%',
+            end: 'top 2rem%',
+            // markers: true,
+            toggleActions: 'play none reverse none',
+          },
+          y: '0rem',
+          opacity: 1,
+          duration: 0.3,
+          stagger: 0.1,
+          // ease: 'expo.out',
+        }
+      );
+    });
+  };
+
+  //restart animation
+  addAnimation();
+  addAnimation2();
+
+  window.addEventListener('resize', function (event) {
+    addAnimation();
+  });
 };
