@@ -20,14 +20,12 @@ export const SplitTextHome = () => {
       let line = textInstance.find('.word-line');
       let word = $(this).find('.word');
 
-      let tl = gsap.timeline({});
-      let tl2 = gsap.timeline({});
       // gsap.set(textInstance, { display: 'none' });
 
       gsap.to(word, {
         scrollTrigger: {
           trigger: '.trigger-0',
-          start: 'top 0%',
+          start: 'top 1rem',
           end: 'top 1rem',
           // markers: true,
           toggleActions: 'play none reverse none',
@@ -38,7 +36,7 @@ export const SplitTextHome = () => {
         stagger: 0.1,
         // ease: 'expo.out',
       });
-      gsap.to(textInstance, 0.2, {
+      gsap.to(textInstance, 0.1, {
         scrollTrigger: {
           trigger: '.trigger-0',
           start: 'top 1rem',
@@ -67,7 +65,7 @@ export const SplitTextHome = () => {
       let tl = gsap.timeline({});
 
       tl.set(textInstance, { opacity: 0 });
-      gsap.to(textInstance, 0.2, {
+      gsap.to(textInstance, 0.05, {
         scrollTrigger: {
           trigger: '.trigger-1',
           start: 'top 0%',
