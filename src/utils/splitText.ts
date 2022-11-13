@@ -28,7 +28,7 @@ export const SplitTextHome = () => {
           trigger: '.trigger-0',
           start: 'top 1rem',
           end: 'top 1rem',
-          markers: true,
+          // markers: true,
           toggleActions: 'play none reverse none',
         },
         y: '2rem',
