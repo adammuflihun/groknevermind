@@ -48,6 +48,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse none',
         },
         display: 'none',
+        duration: 0,
       });
     });
   };
@@ -76,6 +77,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse none',
         },
         display: 'block',
+        duration: 0,
         opacity: 1,
       });
       gsap.fromTo(
