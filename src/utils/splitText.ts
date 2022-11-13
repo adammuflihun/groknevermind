@@ -32,10 +32,10 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           // markers: true,
           onEnterBack: () => {
-            gsap.to($('.title-2').find('.word'), {
-              y: '2rem',
+            gsap.to($('.title-2').find('.word'), 0.1, {
+              y: '0rem',
               opacity: 0,
-              duration: 0.2,
+              duration: 0.1,
               stagger: 0.1,
               ease: 'expo.out',
             });
@@ -81,15 +81,15 @@ export const SplitTextHome = () => {
         {
           scrollTrigger: {
             trigger: '.trigger-1',
-            start: 'top 0%',
+            start: 'top 2rem',
             end: 'top 2rem',
             // markers: true,
 
-            toggleActions: 'play restart reverse restart',
+            toggleActions: 'play restart reset restart',
           },
           y: '0rem',
           opacity: 1,
-          duration: 0.2,
+          duration: 0.1,
           stagger: 0.1,
           ease: 'expo.out',
         }
@@ -150,10 +150,13 @@ export const SplitTextHome = () => {
     });
   };
 
+  // animation 4
+
   //restart animation
   addAnimation();
   addAnimation2();
   addAnimation3();
+  addAnimation4();
 
   window.addEventListener('resize', function (event) {
     addAnimation();
