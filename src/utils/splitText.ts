@@ -34,7 +34,8 @@ export const SplitTextHome = () => {
         opacity: 0,
         duration: 0.05,
 
-        stagger: 0.1,
+        stagger: 0.05,
+
         ease: 'expo.out',
       });
     });
@@ -78,7 +79,8 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.1,
+        stagger: 0.05,
+
         ease: 'expo.out',
       });
 
@@ -136,7 +138,8 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.1,
+        stagger: 0.05,
+
         ease: 'expo.out',
       });
       gsap.set('.wrapper-icons .lottie-2', { scale: 0, display: 'block', opacity: 0 });
@@ -197,7 +200,8 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.1,
+        stagger: 0.05,
+
         ease: 'expo.out',
       });
       gsap.set('.wrapper-icons .lottie-3', { scale: 0 });
@@ -267,7 +271,7 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.1,
+        stagger: 0.05,
         ease: 'expo.out',
       });
 
@@ -344,7 +348,8 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.1,
+        stagger: 0.05,
+
         ease: 'expo.out',
       });
 
@@ -421,7 +426,8 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.1,
+        stagger: 0.05,
+
         ease: 'expo.out',
       });
 
