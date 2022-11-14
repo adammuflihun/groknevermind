@@ -145,12 +145,13 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.1,
+          each: 0.05,
+
           from: 'random',
         },
         scale: 1,
         display: 'block',
-        ease: 'Bounce.easeIn',
+        ease: 'bounce.out',
       });
     });
   };
@@ -204,12 +205,12 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.1,
+          each: 0.05,
           from: 'random',
         },
         scale: 1,
         display: 'block',
-        ease: 'Bounce.easeIn',
+        ease: 'bounce.out',
       });
       gsap.to('.wrapper-icons .lottie-2', 0.04, {
         scrollTrigger: {
@@ -269,6 +270,24 @@ export const SplitTextHome = () => {
         ease: 'expo.out',
       });
 
+      gsap.set('.wrapper-icons .lottie-4', { scale: 0 });
+      gsap.to('.wrapper-icons .lottie-4', 0.04, {
+        scrollTrigger: {
+          trigger: '.trigger-4',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse reset',
+        },
+        stagger: {
+          each: 0.1,
+
+          from: 'random',
+        },
+        scale: 1,
+        display: 'block',
+        ease: 'bounce.out',
+      });
+
       gsap.to('.wrapper-icons .lottie-3', 0.04, {
         scrollTrigger: {
           trigger: '.trigger-4',
@@ -326,6 +345,39 @@ export const SplitTextHome = () => {
         stagger: 0.1,
         ease: 'expo.out',
       });
+
+      gsap.set('.wrapper-icons .lottie-5', { scale: 0 });
+      gsap.to('.wrapper-icons .lottie-5', 0.04, {
+        scrollTrigger: {
+          trigger: '.trigger-5',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse reset',
+        },
+        stagger: {
+          each: 0.05,
+
+          from: 'random',
+        },
+        scale: 1,
+        display: 'block',
+        ease: 'bounce.out',
+      });
+
+      gsap.to('.wrapper-icons .lottie-4', 0.04, {
+        scrollTrigger: {
+          trigger: '.trigger-5',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse reset',
+        },
+        stagger: {
+          each: 0.1,
+          from: 'random',
+        },
+        scale: 0,
+        display: 'block',
+      });
     });
   };
   // animation 6
@@ -368,6 +420,39 @@ export const SplitTextHome = () => {
         duration: 0.1,
         stagger: 0.1,
         ease: 'expo.out',
+      });
+
+      gsap.set('.wrapper-icons .lottie-6', { scale: 0 });
+      gsap.to('.wrapper-icons .lottie-6', 0.04, {
+        scrollTrigger: {
+          trigger: '.trigger-6',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse reset',
+        },
+        stagger: {
+          each: 0.05,
+
+          from: 'random',
+        },
+        scale: 1,
+        display: 'block',
+        ease: 'bounce.out',
+      });
+
+      gsap.to('.wrapper-icons .lottie-5', 0.04, {
+        scrollTrigger: {
+          trigger: '.trigger-6',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse reset',
+        },
+        stagger: {
+          each: 0.1,
+          from: 'random',
+        },
+        scale: 0,
+        display: 'block',
       });
     });
   };
