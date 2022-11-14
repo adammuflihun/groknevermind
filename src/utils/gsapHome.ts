@@ -57,7 +57,7 @@ export const gsapHome = () => {
       // autoAlpha: 0,
       border: 'solid 5px #171717',
       backgroundColor: '#171717',
-      duration: 0.2,
+      duration: 0.1,
     });
 
     gsap.to('[icons="6"]', {
@@ -71,6 +71,7 @@ export const gsapHome = () => {
       // borderWidth: '0',
       // autoAlpha: 0,
       opacity: 0,
+      duration: 0.1,
     });
   };
   scrollBottom();
