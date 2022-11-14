@@ -6,3 +6,6 @@ window.Webflow.push(() => {});
 
 gsapHome();
 SplitTextHome();
+$(window).on('beforeunload', function () {
+  $(window).scrollTop(0);
+});
