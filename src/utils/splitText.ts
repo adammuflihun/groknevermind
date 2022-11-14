@@ -32,7 +32,8 @@ export const SplitTextHome = () => {
         },
         y: '2rem',
         opacity: 0,
-        duration: 0.1,
+        duration: 0.05,
+
         stagger: 0.1,
         ease: 'expo.out',
       });
@@ -75,7 +76,8 @@ export const SplitTextHome = () => {
         },
         y: '0rem',
         opacity: 1,
-        duration: 0.1,
+        duration: 0.05,
+
         stagger: 0.1,
         ease: 'expo.out',
       });
@@ -132,7 +134,8 @@ export const SplitTextHome = () => {
         },
         y: '0rem',
         opacity: 1,
-        duration: 0.1,
+        duration: 0.05,
+
         stagger: 0.1,
         ease: 'expo.out',
       });
@@ -192,7 +195,8 @@ export const SplitTextHome = () => {
         },
         y: '0rem',
         opacity: 1,
-        duration: 0.1,
+        duration: 0.05,
+
         stagger: 0.1,
         ease: 'expo.out',
       });
@@ -261,7 +265,8 @@ export const SplitTextHome = () => {
         },
         y: '0rem',
         opacity: 1,
-        duration: 0.1,
+        duration: 0.05,
+
         stagger: 0.1,
         ease: 'expo.out',
       });
@@ -337,7 +342,8 @@ export const SplitTextHome = () => {
         },
         y: '0rem',
         opacity: 1,
-        duration: 0.1,
+        duration: 0.05,
+
         stagger: 0.1,
         ease: 'expo.out',
       });
@@ -413,7 +419,8 @@ export const SplitTextHome = () => {
         },
         y: '0rem',
         opacity: 1,
-        duration: 0.1,
+        duration: 0.05,
+
         stagger: 0.1,
         ease: 'expo.out',
       });
