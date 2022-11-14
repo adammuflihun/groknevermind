@@ -65,7 +65,7 @@ export const gsapHome = () => {
         trigger: '.at-nevermind',
         start: 'top 100%',
         end: '0% 100%',
-        markers: true,
+        // markers: true,
         toggleActions: 'play none reverse none',
       },
       // borderWidth: '0',
