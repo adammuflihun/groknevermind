@@ -88,7 +88,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse none',
         },
         stagger: {
-          each: 0.1,
+          each: 0.2,
           from: 'random',
         },
         scale: 0,
@@ -136,7 +136,7 @@ export const SplitTextHome = () => {
         stagger: 0.1,
         ease: 'expo.out',
       });
-      gsap.set('.wrapper-icons .lottie-2', { scale: 0 });
+      gsap.set('.wrapper-icons .lottie-2', { scale: 0, display: 'block', opacity: 0 });
       gsap.to('.wrapper-icons .lottie-2', 0.05, {
         scrollTrigger: {
           trigger: '.trigger-2',
@@ -145,12 +145,12 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.05,
+          each: 0.2,
 
           from: 'random',
         },
         scale: 1,
-        display: 'block',
+        opacity: 1,
         ease: 'bounce.out',
       });
     });
@@ -205,26 +205,22 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.05,
+          each: 0.2,
+
           from: 'random',
         },
         scale: 1,
         display: 'block',
         ease: 'bounce.out',
       });
-      gsap.to('.wrapper-icons .lottie-2', 0.04, {
+      gsap.to('[icons="2"]', {
         scrollTrigger: {
           trigger: '.trigger-3',
           start: 'top 1rem',
           end: 'top 1rem',
           toggleActions: 'play none reverse reset',
         },
-        stagger: {
-          each: 0.1,
-          from: 'random',
-        },
-        scale: 0,
-        display: 'block',
+        opacity: 0,
       });
     });
   };
@@ -279,7 +275,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.1,
+          each: 0.2,
 
           from: 'random',
         },
@@ -288,7 +284,7 @@ export const SplitTextHome = () => {
         ease: 'bounce.out',
       });
 
-      gsap.to('.wrapper-icons .lottie-3', 0.04, {
+      gsap.to('[icons="3"]', 0.04, {
         scrollTrigger: {
           trigger: '.trigger-4',
           start: 'top 1rem',
@@ -355,7 +351,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.05,
+          each: 0.2,
 
           from: 'random',
         },
@@ -364,7 +360,7 @@ export const SplitTextHome = () => {
         ease: 'bounce.out',
       });
 
-      gsap.to('.wrapper-icons .lottie-4', 0.04, {
+      gsap.to('[icons="4"]', 0.04, {
         scrollTrigger: {
           trigger: '.trigger-5',
           start: 'top 1rem',
@@ -431,7 +427,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.05,
+          each: 0.2,
 
           from: 'random',
         },
@@ -440,7 +436,7 @@ export const SplitTextHome = () => {
         ease: 'bounce.out',
       });
 
-      gsap.to('.wrapper-icons .lottie-5', 0.04, {
+      gsap.to('[icons="5"]', 0.04, {
         scrollTrigger: {
           trigger: '.trigger-6',
           start: 'top 1rem',
@@ -448,7 +444,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.1,
+          each: 0.2,
           from: 'random',
         },
         scale: 0,
