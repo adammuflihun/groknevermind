@@ -79,6 +79,20 @@ export const SplitTextHome = () => {
         stagger: 0.1,
         ease: 'expo.out',
       });
+
+      gsap.to('.wrapper-icons .lottie-1', {
+        scrollTrigger: {
+          trigger: '.trigger-1',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse none',
+        },
+        stagger: {
+          each: 0.1,
+          from: 'random',
+        },
+        scale: 0,
+      });
     });
   };
   // animation 2
@@ -122,11 +136,27 @@ export const SplitTextHome = () => {
         stagger: 0.1,
         ease: 'expo.out',
       });
+      gsap.set('.wrapper-icons .lottie-2', { scale: 0 });
+      gsap.to('.wrapper-icons .lottie-2', 0.05, {
+        scrollTrigger: {
+          trigger: '.trigger-2',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse reset',
+        },
+        stagger: {
+          each: 0.1,
+          from: 'random',
+        },
+        scale: 1,
+        display: 'block',
+        ease: 'Bounce.easeIn',
+      });
     });
   };
-  // animation 2
+  // animation 3
 
-  //animation 2
+  //animation 4
   let addAnimation4 = function () {
     $('.title-4').each(function (index) {
       const text = new SplitType($(this), {
@@ -165,11 +195,41 @@ export const SplitTextHome = () => {
         stagger: 0.1,
         ease: 'expo.out',
       });
+      gsap.set('.wrapper-icons .lottie-3', { scale: 0 });
+      gsap.to('.wrapper-icons .lottie-3', 0.04, {
+        scrollTrigger: {
+          trigger: '.trigger-3',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse reset',
+        },
+        stagger: {
+          each: 0.1,
+          from: 'random',
+        },
+        scale: 1,
+        display: 'block',
+        ease: 'Bounce.easeIn',
+      });
+      gsap.to('.wrapper-icons .lottie-2', 0.04, {
+        scrollTrigger: {
+          trigger: '.trigger-3',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse reset',
+        },
+        stagger: {
+          each: 0.1,
+          from: 'random',
+        },
+        scale: 0,
+        display: 'block',
+      });
     });
   };
-  // animation 2
+  // animation 4
 
-  //animation 2
+  //animation 5
   let addAnimation5 = function () {
     $('.title5').each(function (index) {
       const text = new SplitType($(this), {
@@ -208,11 +268,26 @@ export const SplitTextHome = () => {
         stagger: 0.1,
         ease: 'expo.out',
       });
+
+      gsap.to('.wrapper-icons .lottie-3', 0.04, {
+        scrollTrigger: {
+          trigger: '.trigger-4',
+          start: 'top 1rem',
+          end: 'top 1rem',
+          toggleActions: 'play none reverse reset',
+        },
+        stagger: {
+          each: 0.1,
+          from: 'random',
+        },
+        scale: 0,
+        display: 'block',
+      });
     });
   };
-  // animation 2
+  // animation 5
 
-  //animation 2
+  //animation 6
   let addAnimation6 = function () {
     $('.title-6').each(function (index) {
       const text = new SplitType($(this), {
@@ -253,9 +328,9 @@ export const SplitTextHome = () => {
       });
     });
   };
-  // animation 2
+  // animation 6
 
-  //animation 2
+  //animation 7
   let addAnimation7 = function () {
     $('.title-7').each(function (index) {
       const text = new SplitType($(this), {
@@ -296,7 +371,7 @@ export const SplitTextHome = () => {
       });
     });
   };
-  // animation 2
+  // animation 7
 
   // Calling animation
   addAnimation();
