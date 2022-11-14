@@ -145,7 +145,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.2,
+          each: 0.1,
 
           from: 'random',
         },
@@ -205,7 +205,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.2,
+          each: 0.4,
 
           from: 'random',
         },
@@ -275,7 +275,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.2,
+          each: 0.4,
 
           from: 'random',
         },
@@ -351,7 +351,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.2,
+          each: 0.4,
 
           from: 'random',
         },
@@ -427,7 +427,7 @@ export const SplitTextHome = () => {
           toggleActions: 'play none reverse reset',
         },
         stagger: {
-          each: 0.2,
+          each: 0.4,
 
           from: 'random',
         },
