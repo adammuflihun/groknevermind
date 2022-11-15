@@ -34,45 +34,45 @@ export const gsapHome = () => {
   //   },
   // });
 
-  let scrollBottom = function () {
-    gsap.to('.grid-block-background, .wrapper-content-grid, .center-content', {
-      scrollTrigger: {
-        trigger: '.at-nevermind',
-        start: 'top 100%',
-        end: '0% 100%',
-        // markers: true,
-        toggleActions: 'play none reverse none',
-        // onEnter: () => {
-        //   colorBg.kill();
-        //   colorBg1.kill();
-        //   colorBg2.kill();
-        // },
-        // onLeaveBack: () => {
-        //   colorBg.restart();
-        //   colorBg1.restart();
-        //   colorBg2.restart();
-        // },
-      },
-      // borderWidth: '0',
-      // autoAlpha: 0,
-      border: 'solid 5px #171717',
-      backgroundColor: '#171717',
-      duration: 0.1,
-    });
+  // let scrollBottom = function () {
+  //   gsap.to('.grid-block-background, .wrapper-content-grid, .center-content', {
+  //     scrollTrigger: {
+  //       trigger: '.at-nevermind',
+  //       start: 'top 100%',
+  //       end: '0% 100%',
+  //       // markers: true,
+  //       toggleActions: 'play none reverse none',
+  //       // onEnter: () => {
+  //       //   colorBg.kill();
+  //       //   colorBg1.kill();
+  //       //   colorBg2.kill();
+  //       // },
+  //       // onLeaveBack: () => {
+  //       //   colorBg.restart();
+  //       //   colorBg1.restart();
+  //       //   colorBg2.restart();
+  //       // },
+  //     },
+  //     // borderWidth: '0',
+  //     // autoAlpha: 0,
+  //     border: 'solid 5px #171717',
+  //     backgroundColor: '#171717',
+  //     duration: 0.1,
+  //   });
 
-    gsap.to('[icons="6"]', {
-      scrollTrigger: {
-        trigger: '.at-nevermind',
-        start: 'top 100%',
-        end: '0% 100%',
-        // markers: true,
-        toggleActions: 'play none reverse none',
-      },
-      // borderWidth: '0',
-      // autoAlpha: 0,
-      opacity: 0,
-      duration: 0.1,
-    });
-  };
-  scrollBottom();
+  //   gsap.to('[icons="6"]', {
+  //     scrollTrigger: {
+  //       trigger: '.at-nevermind',
+  //       start: 'top 100%',
+  //       end: '0% 100%',
+  //       // markers: true,
+  //       toggleActions: 'play none reverse none',
+  //     },
+  //     // borderWidth: '0',
+  //     // autoAlpha: 0,
+  //     opacity: 0,
+  //     duration: 0.1,
+  //   });
+  // };
+  // scrollBottom();
 };
