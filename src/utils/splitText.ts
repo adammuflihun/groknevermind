@@ -34,7 +34,7 @@ export const SplitTextHome = () => {
         opacity: 0,
         duration: 0.05,
 
-        stagger: 0.05,
+        // stagger: 0.05,
 
         ease: 'expo.out',
       });
@@ -79,7 +79,7 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.05,
+        // stagger: 0.05,
 
         ease: 'expo.out',
       });
@@ -91,10 +91,10 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           toggleActions: 'play none reverse none',
         },
-        stagger: {
-          each: 0.2,
-          from: 'random',
-        },
+        // stagger: {
+        //   each: 0.2,
+        //   from: 'random',
+        // },
         scale: 0,
       });
     });
@@ -138,7 +138,7 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.05,
+        // stagger: 0.05,
 
         ease: 'expo.out',
       });
@@ -150,11 +150,11 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           toggleActions: 'play none reverse reset',
         },
-        stagger: {
-          each: 0.1,
+        // stagger: {
+        //   each: 0.1,
 
-          from: 'random',
-        },
+        //   from: 'random',
+        // },
         scale: 1,
         opacity: 1,
         ease: 'bounce.out',
@@ -200,7 +200,7 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.05,
+        // stagger: 0.05,
 
         ease: 'expo.out',
       });
@@ -212,11 +212,11 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           toggleActions: 'play none reverse reset',
         },
-        stagger: {
-          each: 0.4,
+        // stagger: {
+        //   each: 0.4,
 
-          from: 'random',
-        },
+        //   from: 'random',
+        // },
         scale: 1,
         display: 'block',
         ease: 'bounce.out',
@@ -271,7 +271,7 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.05,
+        // stagger: 0.05,
         ease: 'expo.out',
       });
 
@@ -283,11 +283,11 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           toggleActions: 'play none reverse reset',
         },
-        stagger: {
-          each: 0.4,
+        // stagger: {
+        //   each: 0.4,
 
-          from: 'random',
-        },
+        //   from: 'random',
+        // },
         scale: 1,
         display: 'block',
         ease: 'bounce.out',
@@ -300,10 +300,10 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           toggleActions: 'play none reverse reset',
         },
-        stagger: {
-          each: 0.1,
-          from: 'random',
-        },
+        // stagger: {
+        //   each: 0.1,
+        //   from: 'random',
+        // },
         scale: 0,
         display: 'block',
       });
@@ -348,7 +348,7 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.05,
+        // stagger: 0.05,
 
         ease: 'expo.out',
       });
@@ -361,11 +361,11 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           toggleActions: 'play none reverse reset',
         },
-        stagger: {
-          each: 0.4,
+        // stagger: {
+        //   each: 0.4,
 
-          from: 'random',
-        },
+        //   from: 'random',
+        // },
         scale: 1,
         display: 'block',
         ease: 'bounce.out',
@@ -378,10 +378,10 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           toggleActions: 'play none reverse reset',
         },
-        stagger: {
-          each: 0.1,
-          from: 'random',
-        },
+        // stagger: {
+        //   each: 0.1,
+        //   from: 'random',
+        // },
         scale: 0,
         display: 'block',
       });
@@ -426,7 +426,7 @@ export const SplitTextHome = () => {
         opacity: 1,
         duration: 0.05,
 
-        stagger: 0.05,
+        // stagger: 0.05,
 
         ease: 'expo.out',
       });
@@ -439,11 +439,11 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           toggleActions: 'play none reverse reset',
         },
-        stagger: {
-          each: 0.4,
+        // stagger: {
+        //   each: 0.4,
 
-          from: 'random',
-        },
+        //   from: 'random',
+        // },
         scale: 1,
         display: 'block',
         ease: 'bounce.out',
@@ -456,10 +456,10 @@ export const SplitTextHome = () => {
           end: 'top 1rem',
           toggleActions: 'play none reverse reset',
         },
-        stagger: {
-          each: 0.2,
-          from: 'random',
-        },
+        // stagger: {
+        //   each: 0.2,
+        //   from: 'random',
+        // },
         scale: 0,
         display: 'block',
       });
